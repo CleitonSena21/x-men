@@ -1,0 +1,92 @@
+body {
+    font-family: "Oxanium", cursive;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body::before {
+    content: "";
+    background-image: url(../imagens/bg-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;        /*linha os itens na horizontal */
+}
+
+.selecao-de-personagens {
+    display: flex;
+    align-items: center;            /* alinha os itens na vertical */
+    gap: 30px;
+    min-height: calc(100vh - 152px);    /* 'vh' janela/tela de exibição do navegador,  os -152px são para tirar a margem do cabelhaço assim não gerar rolagem na pagina */
+    justify-content: center;
+}
+
+.selecao-de-personagens .lista-de-personagens {
+    display: flex;
+    flex-wrap: wrap;        /* envolver */ 
+    gap: 30px;              /* espaçamento entre os itens */
+    justify-content: center;
+}
+
+.selecao-de-personagens .personagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 585px;
+    gap: 25px;
+}
+
+.selecao-de-personagens .personagens .titulo {
+    font-size: 20px;
+    letter-spacing: 4px;                            /*espaçamento entre as letras */
+    text-transform: uppercase;
+    border-bottom: 2px solid #47f4ff;            /* uppercase - fonte maiúscula */
+    width: 100%;
+    text-align: center;
+}
+
+.lista-de-personagens .personagem {
+    border-bottom: 4px solid #47f4ff;
+}
+
+.lista-de-personagens .personagem img {
+    width: 100%;                                /* altura */
+    height: 100%;                               /* largura */
+}
+
+.lista-de-personagens .personagem.selecionado {
+    box-shadow: 0px 0px 24px 5px #2771f7;
+}
+
+.personagem-selecionado {
+    text-align: center;
+    max-height: 530px;
+}
+
+.personagem-selecionado .personagem-grande {
+    width: 430px;
+    height: 430px;
+}
+
+.personagem-selecionado .nome-personagem {
+    border-bottom: 2px solid #47f4ff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.personagem-selecionado .descricao-personagem {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 20px;
+    width: 420px;
+}
